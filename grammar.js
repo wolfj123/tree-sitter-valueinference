@@ -1,6 +1,6 @@
 //https://regex101.com/r/dU5fO8/73
-const alpha = /[^:\s0-9;.,`"'|<=>\\\[\]{}\uFEFF\u2060\u200B\u00A0]|\\u[0-9a-fA-F]{4}|\\u\{[0-9a-fA-F]+\}/
-const alpha_numeric = /[^+:\s;.,`"'|<=>\\\[\]{}\uFEFF\u2060\u200B\u00A0]|\\u[0-9a-fA-F]{4}|\\u\{[0-9a-fA-F]+\}/
+const alpha = /[^:\s0-9;.,`"'|<=>/\\\[\]{}\uFEFF\u2060\u200B\u00A0]|\\u[0-9a-fA-F]{4}|\\u\{[0-9a-fA-F]+\}/
+const alpha_numeric = /[^+:\s;.,`"'|<=>/\\\[\]{}\uFEFF\u2060\u200B\u00A0]|\\u[0-9a-fA-F]{4}|\\u\{[0-9a-fA-F]+\}/
 const string_regex = /[^;`|<=>\\\[\]{}\uFEFF\u2060\u200B\u00A0]|\\u[0-9a-fA-F]{4}|\\u\{[0-9a-fA-F]+\}/
 
 
@@ -22,7 +22,7 @@ module.exports = grammar({
       source_file: $ => repeat($.value_inferrer),
       
       value_inferrer: $ => seq(
-        "[", $.identifier, ":", "support", repeat($.inference_pair), "]"
+        "[", $.slot_identifier, ":", "support", repeat($.inference_pair), "]"
       ),
 
       inference_pair: $ => seq(
@@ -34,17 +34,20 @@ module.exports = grammar({
       ),
       
       atomic_assignment_slot: $ => seq(
-        $.identifier, "=", $.identifier_simple
+        $.slot_identifier, "=", $.identifier_simple
       ),
       aggregate_assignment_slot: $ => seq(
-       $.identifier, "+=" , $.identifier_simple
+       $.slot_identifier, "+=" , $.identifier_simple
       ),
 
-      identifier: $ => seq(
+      slot_identifier: $ => seq(
         $.identifier_simple, repeat(seq("/", $.identifier_simple))
       ),
 
-      identifier_simple: $ => /[_a-zA-Z][_a-zA-Z0-9]*/,
+      //identifier_simple: $ => /[_a-zA-Z][_a-zA-Z0-9]*/,
+      identifier_simple: $ => {
+        return token(seq(alpha, repeat(alpha_numeric)))
+      },
 
       comment: $ => prec(PREC.COMMENT, choice(
         seq('<--', /.*/), 

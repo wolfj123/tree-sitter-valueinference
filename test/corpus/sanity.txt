@@ -10,17 +10,42 @@ sanity 1
 ---
 (source_file 
     (value_inferrer 
-        (identifier 
+        (slot_identifier 
             (identifier_simple)) 
         (inference_pair 
             (assignment_slot 
                 (atomic_assignment_slot 
-                    (identifier 
+                    (slot_identifier 
                         (identifier_simple)) 
                     (identifier_simple))) 
             (assignment_slot 
                 (atomic_assignment_slot 
-                    (identifier 
+                    (slot_identifier 
+                        (identifier_simple)) 
+                    (identifier_simple))) 
+            (identifier_simple))))
+
+
+==================
+comment
+==================
+
+[DataTag: support <* comment *>
+  [ Encrypt/Encrypt=None -> Blue]
+]
+
+
+---
+(source_file 
+    (value_inferrer 
+        (slot_identifier 
+            (identifier_simple)) 
+        (comment)
+        (inference_pair 
+            (assignment_slot 
+                (atomic_assignment_slot 
+                    (slot_identifier 
+                        (identifier_simple)
                         (identifier_simple)) 
                     (identifier_simple))) 
             (identifier_simple))))

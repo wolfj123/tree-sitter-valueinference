@@ -8,11 +8,11 @@
       "required": true,
       "types": [
         {
-          "type": "identifier",
+          "type": "identifier_simple",
           "named": true
         },
         {
-          "type": "identifier_simple",
+          "type": "slot_identifier",
           "named": true
         }
       ]
@@ -46,26 +46,11 @@
       "required": true,
       "types": [
         {
-          "type": "identifier",
+          "type": "identifier_simple",
           "named": true
         },
         {
-          "type": "identifier_simple",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "identifier",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "identifier_simple",
+          "type": "slot_identifier",
           "named": true
         }
       ]
@@ -83,6 +68,21 @@
           "type": "assignment_slot",
           "named": true
         },
+        {
+          "type": "identifier_simple",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "slot_identifier",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
         {
           "type": "identifier_simple",
           "named": true
@@ -114,11 +114,11 @@
       "required": true,
       "types": [
         {
-          "type": "identifier",
+          "type": "inference_pair",
           "named": true
         },
         {
-          "type": "inference_pair",
+          "type": "slot_identifier",
           "named": true
         }
       ]
