@@ -1,0 +1,171 @@
+[
+  {
+    "type": "aggregate_assignment_slot",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "identifier_simple",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "assignment_slot",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "aggregate_assignment_slot",
+          "named": true
+        },
+        {
+          "type": "atomic_assignment_slot",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "atomic_assignment_slot",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "identifier_simple",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "identifier",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier_simple",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "inference_pair",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "assignment_slot",
+          "named": true
+        },
+        {
+          "type": "identifier_simple",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "source_file",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "value_inferrer",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "value_inferrer",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "inference_pair",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "+=",
+    "named": false
+  },
+  {
+    "type": "->",
+    "named": false
+  },
+  {
+    "type": "/",
+    "named": false
+  },
+  {
+    "type": ":",
+    "named": false
+  },
+  {
+    "type": ";",
+    "named": false
+  },
+  {
+    "type": "<--",
+    "named": false
+  },
+  {
+    "type": "=",
+    "named": false
+  },
+  {
+    "type": "[",
+    "named": false
+  },
+  {
+    "type": "]",
+    "named": false
+  },
+  {
+    "type": "identifier_simple",
+    "named": true
+  },
+  {
+    "type": "support",
+    "named": false
+  }
+]

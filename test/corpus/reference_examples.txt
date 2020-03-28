@@ -1,0 +1,17 @@
+==================
+reference example
+==================
+
+[DataTag: support
+  [ Encrypt=None;   DUA_AM=Implied -> Blue    ]
+  [ Encrypt=Quick;  DUA_AM=Click   -> Yellow  ]
+  [ Encrypt=Hard;   DUA_AM=Click   -> Green   ]
+  [ Encrypt=Double; DUA_AM=Type    -> Red     ]
+  [ Encrypt=Double; DUA_AM=Sign    -> Crimson ]
+]
+
+
+---
+(source_file (value_inferrer (identifier (identifier_simple)) (inference_pair (assignment_slot (atomic_assignment_slot (identifier (identifier_simple)) 
+(identifier_simple))) (assignment_slot (atomic_assignment_slot (identifier (identifier_simple)) (identifier_simple))) (identifier_simple)) (inference_pair (assignment_slot (atomic_assignment_slot (identifier (identifier_simple)) (identifier_simple))) (assignment_slot (atomic_assignment_slot (identifier (identifier_simple)) (identifier_simple))) (identifier_simple)) (inference_pair (assignment_slot (atomic_assignment_slot (identifier (identifier_simple)) (identifier_simple))) (assignment_slot (atomic_assignment_slot (identifier (identifier_simple)) (identifier_simple))) (identifier_simple)) (inference_pair (assignment_slot (atomic_assignment_slot (identifier (identifier_simple)) (identifier_simple))) (assignment_slot (atomic_assignment_slot (identifier (identifier_simple)) (identifier_simple))) (identifier_simple)) (inference_pair (assignment_slot (atomic_assignment_slot (identifier (identifier_simple)) (identifier_simple))) (assignment_slot (atomic_assignment_slot (identifier (identifier_simple)) (identifier_simple))) (identifier_simple)))) 
+						

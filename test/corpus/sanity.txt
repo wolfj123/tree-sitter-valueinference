@@ -1,0 +1,26 @@
+==================
+sanity 1
+==================
+
+[DataTag: support
+  [ Encrypt=None; DUA_AM=Implied -> Blue]
+]
+
+
+---
+(source_file 
+    (value_inferrer 
+        (identifier 
+            (identifier_simple)) 
+        (inference_pair 
+            (assignment_slot 
+                (atomic_assignment_slot 
+                    (identifier 
+                        (identifier_simple)) 
+                    (identifier_simple))) 
+            (assignment_slot 
+                (atomic_assignment_slot 
+                    (identifier 
+                        (identifier_simple)) 
+                    (identifier_simple))) 
+            (identifier_simple))))

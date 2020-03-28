@@ -1,0 +1,22 @@
+{
+  "name": "tree-sitter-valueinference",
+  "version": "0.0.1",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wolfj123/tree-sitter-valueinference"
+  },
+  "main": "index.js",
+  "scripts": {
+    "compile": "tree-sitter generate",
+    "test": "tree-sitter test"
+  },
+  "author": "Jonathan Wolf",
+  "license": "MIT",
+  "dependencies": {
+    "nan": "^2.14.0"
+  },
+  "devDependencies": {
+    "tree-sitter-cli": "^0.16.5"
+  }
+}
