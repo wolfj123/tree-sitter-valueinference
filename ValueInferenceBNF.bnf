@@ -16,7 +16,7 @@ VALUE INFERENCE BNF
 
 <slot_identifier> 				::= <identifier_simple> ("/" <identifier_simple>)*
 
-<identifier_simple>				::= "^[_a-z][_a-z0-9]*$"
+<identifier_simple>				::= legal slot/value name
 
 
 #COMMENTS
