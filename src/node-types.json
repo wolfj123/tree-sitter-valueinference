@@ -8,11 +8,11 @@
       "required": true,
       "types": [
         {
-          "type": "identifier_simple",
+          "type": "slot_reference",
           "named": true
         },
         {
-          "type": "slot_identifier",
+          "type": "slot_value",
           "named": true
         }
       ]
@@ -46,11 +46,11 @@
       "required": true,
       "types": [
         {
-          "type": "identifier_simple",
+          "type": "slot_reference",
           "named": true
         },
         {
-          "type": "slot_identifier",
+          "type": "slot_value",
           "named": true
         }
       ]
@@ -69,14 +69,14 @@
           "named": true
         },
         {
-          "type": "identifier_simple",
+          "type": "slot_value",
           "named": true
         }
       ]
     }
   },
   {
-    "type": "slot_identifier",
+    "type": "slot_reference",
     "named": true,
     "fields": {},
     "children": {
@@ -84,7 +84,22 @@
       "required": true,
       "types": [
         {
-          "type": "identifier_simple",
+          "type": "slot_identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "slot_value",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "slot_identifier",
           "named": true
         }
       ]
@@ -118,7 +133,7 @@
           "named": true
         },
         {
-          "type": "slot_identifier",
+          "type": "slot_reference",
           "named": true
         }
       ]
@@ -161,7 +176,7 @@
     "named": false
   },
   {
-    "type": "identifier_simple",
+    "type": "slot_identifier",
     "named": true
   },
   {

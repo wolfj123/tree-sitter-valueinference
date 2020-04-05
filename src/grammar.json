@@ -17,7 +17,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "slot_identifier"
+          "name": "slot_reference"
         },
         {
           "type": "STRING",
@@ -73,7 +73,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "identifier_simple"
+          "name": "slot_value"
         },
         {
           "type": "STRING",
@@ -99,7 +99,7 @@
       "members": [
         {
           "type": "SYMBOL",
-          "name": "slot_identifier"
+          "name": "slot_reference"
         },
         {
           "type": "STRING",
@@ -107,7 +107,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "identifier_simple"
+          "name": "slot_value"
         }
       ]
     },
@@ -116,7 +116,7 @@
       "members": [
         {
           "type": "SYMBOL",
-          "name": "slot_identifier"
+          "name": "slot_reference"
         },
         {
           "type": "STRING",
@@ -124,16 +124,16 @@
         },
         {
           "type": "SYMBOL",
-          "name": "identifier_simple"
+          "name": "slot_value"
         }
       ]
     },
-    "slot_identifier": {
+    "slot_reference": {
       "type": "SEQ",
       "members": [
         {
           "type": "SYMBOL",
-          "name": "identifier_simple"
+          "name": "slot_identifier"
         },
         {
           "type": "REPEAT",
@@ -146,14 +146,23 @@
               },
               {
                 "type": "SYMBOL",
-                "name": "identifier_simple"
+                "name": "slot_identifier"
               }
             ]
           }
         }
       ]
     },
-    "identifier_simple": {
+    "slot_value": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "slot_identifier"
+        }
+      ]
+    },
+    "slot_identifier": {
       "type": "TOKEN",
       "content": {
         "type": "SEQ",

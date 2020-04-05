@@ -22,11 +22,11 @@ module.exports = grammar({
       source_file: $ => repeat($.value_inferrer),
       
       value_inferrer: $ => seq(
-        "[", $.slot_identifier, ":", "support", repeat($.inference_pair), "]"
+        "[", $.slot_reference, ":", "support", repeat($.inference_pair), "]"
       ),
 
       inference_pair: $ => seq(
-        "[", $.assignment_slot, repeat(seq(";" ,$.assignment_slot)), "->", $.identifier_simple, "]"
+        "[", $.assignment_slot, repeat(seq(";" ,$.assignment_slot)), "->", $.slot_value, "]"
       ),
 
       assignment_slot: $ => choice(
@@ -34,18 +34,22 @@ module.exports = grammar({
       ),
       
       atomic_assignment_slot: $ => seq(
-        $.slot_identifier, "=", $.identifier_simple
+        $.slot_reference, "=", $.slot_value
       ),
       aggregate_assignment_slot: $ => seq(
-       $.slot_identifier, "+=" , $.identifier_simple
+        $.slot_reference, "+=" , $.slot_value
       ),
 
-      slot_identifier: $ => seq(
-        $.identifier_simple, repeat(seq("/", $.identifier_simple))
+      slot_reference: $ => seq(
+        $.slot_identifier, repeat(seq("/", $.slot_identifier))
+      ),
+
+      slot_value: $ => seq(
+        $.slot_identifier
       ),
 
       //identifier_simple: $ => /[_a-zA-Z][_a-zA-Z0-9]*/,
-      identifier_simple: $ => {
+      slot_identifier: $ => {
         return token(seq(alpha, repeat(alpha_numeric)))
       },
 

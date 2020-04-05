@@ -4,19 +4,22 @@ VALUE INFERENCE BNF
 #https://datatagginglibrary.readthedocs.io/en/latest/tutorial/inference.html#adding-inferres-to-a-model
 <value_inference> 				::= <value_inferrer>*
 
-<value_inferrer>				::= "[" <slot_identifier> ":" "support" <inference_pair>* "]"
+<value_inferrer>				::= "[" <slot_reference> ":" "support" <inference_pair>* "]"
 
-<inference_pair>				::= "[" <assignment_slot> (";" <assignment_slot>)* "->" <identifier_simple> "]"
+<inference_pair>				::= "[" <assignment_slot> (";" <assignment_slot>)* "->" <slot_value> "]"
 
 <assignment_slot> 				::= (<atomic_assignment_slot> | <aggregate_assignment_slot>)
 
-<atomic_assignment_slot> 		::= <slot_identifier> "=" <identifier_simple>
+<atomic_assignment_slot> 		::= <slot_reference> "=" <slot_value>
 
-<aggregate_assignment_slot> 	::= <slot_identifier> "+=" <identifier_simple>
+<aggregate_assignment_slot> 	::= <slot_reference> "+=" <slot_value>
 
-<slot_identifier> 				::= <identifier_simple> ("/" <identifier_simple>)*
+<slot_reference> 				::= <slot_identifier> ("/"<slot_identifier>)*
 
-<identifier_simple>				::= legal slot/value name
+<slot_value>                    ::= <slot_identifier>
+
+<slot_identifier> 		        ::= <letter> (<letter> | <digit>)* 
+
 
 
 #COMMENTS

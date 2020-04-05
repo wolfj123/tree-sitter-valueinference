@@ -8,23 +8,7 @@ sanity 1
 
 
 ---
-(source_file 
-    (value_inferrer 
-        (slot_identifier 
-            (identifier_simple)) 
-        (inference_pair 
-            (assignment_slot 
-                (atomic_assignment_slot 
-                    (slot_identifier 
-                        (identifier_simple)) 
-                    (identifier_simple))) 
-            (assignment_slot 
-                (atomic_assignment_slot 
-                    (slot_identifier 
-                        (identifier_simple)) 
-                    (identifier_simple))) 
-            (identifier_simple))))
-
+(source_file (value_inferrer (slot_reference (slot_identifier)) (inference_pair (assignment_slot (atomic_assignment_slot (slot_reference (slot_identifier)) (slot_value (slot_identifier)))) (assignment_slot (atomic_assignment_slot (slot_reference (slot_identifier)) (slot_value (slot_identifier)))) (slot_value (slot_identifier)))))
 
 ==================
 comment
@@ -38,14 +22,15 @@ comment
 ---
 (source_file 
     (value_inferrer 
-        (slot_identifier 
-            (identifier_simple)) 
-        (comment)
+        (slot_reference 
+            (slot_identifier)) 
+        (comment) 
         (inference_pair 
             (assignment_slot 
                 (atomic_assignment_slot 
-                    (slot_identifier 
-                        (identifier_simple)
-                        (identifier_simple)) 
-                    (identifier_simple))) 
-            (identifier_simple))))
+                    (slot_reference 
+                        (slot_identifier) 
+                        (slot_identifier)) 
+                    (slot_value (slot_identifier)))) 
+            (slot_value 
+                (slot_identifier)))))
