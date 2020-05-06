@@ -24,8 +24,17 @@
           "value": ":"
         },
         {
-          "type": "STRING",
-          "value": "support"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "support"
+            },
+            {
+              "type": "STRING",
+              "value": "comply"
+            }
+          ]
         },
         {
           "type": "REPEAT",

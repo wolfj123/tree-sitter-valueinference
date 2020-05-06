@@ -4,7 +4,7 @@ VALUE INFERENCE BNF
 #https://datatagginglibrary.readthedocs.io/en/latest/tutorial/inference.html#adding-inferres-to-a-model
 <value_inference> 				::= <value_inferrer>*
 
-<value_inferrer>				::= "[" <slot_reference> ":" "support" <inference_pair>* "]"
+<value_inferrer>				::= "[" <slot_reference> ":" ("support"|"comply") <inference_pair>* "]"
 
 <inference_pair>				::= "[" <assignment_slot> (";" <assignment_slot>)* "->" <slot_value> "]"
 

@@ -1,8 +1,20 @@
 ==================
-sanity 1
+sanity support 1
 ==================
 
 [DataTag: support
+  [ Encrypt=None; DUA_AM=Implied -> Blue]
+]
+
+---
+(source_file (value_inferrer (slot_reference (slot_identifier)) (inference_pair (assignment_slot (atomic_assignment_slot (slot_reference (slot_identifier)) (slot_value (slot_identifier)))) (assignment_slot (atomic_assignment_slot (slot_reference (slot_identifier)) (slot_value (slot_identifier)))) (slot_value (slot_identifier)))))
+
+
+==================
+sanity comply 1
+==================
+
+[DataTag: comply
   [ Encrypt=None; DUA_AM=Implied -> Blue]
 ]
 
@@ -34,3 +46,5 @@ comment
                     (slot_value (slot_identifier)))) 
             (slot_value 
                 (slot_identifier)))))
+
+

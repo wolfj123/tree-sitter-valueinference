@@ -22,7 +22,7 @@ module.exports = grammar({
       source_file: $ => repeat($.value_inferrer),
       
       value_inferrer: $ => seq(
-        "[", $.slot_reference, ":", "support", repeat($.inference_pair), "]"
+        "[", $.slot_reference, ":", choice("support","comply"), repeat($.inference_pair), "]"
       ),
 
       inference_pair: $ => seq(

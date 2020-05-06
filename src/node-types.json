@@ -176,6 +176,10 @@
     "named": false
   },
   {
+    "type": "comply",
+    "named": false
+  },
+  {
     "type": "slot_identifier",
     "named": true
   },
