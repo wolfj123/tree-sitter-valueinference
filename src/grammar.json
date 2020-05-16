@@ -4,11 +4,20 @@
     "source_file": {
       "type": "REPEAT",
       "content": {
-        "type": "SYMBOL",
-        "name": "value_inferrer"
+        "type": "CHOICE",
+        "members": [
+          {
+            "type": "SYMBOL",
+            "name": "support_value_inferrer"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "comply_value_inferrer"
+          }
+        ]
       }
     },
-    "value_inferrer": {
+    "support_value_inferrer": {
       "type": "SEQ",
       "members": [
         {
@@ -24,17 +33,40 @@
           "value": ":"
         },
         {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "STRING",
-              "value": "support"
-            },
-            {
-              "type": "STRING",
-              "value": "comply"
-            }
-          ]
+          "type": "STRING",
+          "value": "support"
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "SYMBOL",
+            "name": "inference_pair"
+          }
+        },
+        {
+          "type": "STRING",
+          "value": "]"
+        }
+      ]
+    },
+    "comply_value_inferrer": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "["
+        },
+        {
+          "type": "SYMBOL",
+          "name": "slot_reference"
+        },
+        {
+          "type": "STRING",
+          "value": ":"
+        },
+        {
+          "type": "STRING",
+          "value": "comply"
         },
         {
           "type": "REPEAT",

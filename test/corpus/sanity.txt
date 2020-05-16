@@ -7,7 +7,7 @@ sanity support 1
 ]
 
 ---
-(source_file (value_inferrer (slot_reference (slot_identifier)) (inference_pair (assignment_slot (atomic_assignment_slot (slot_reference (slot_identifier)) (slot_value (slot_identifier)))) (assignment_slot (atomic_assignment_slot (slot_reference (slot_identifier)) (slot_value (slot_identifier)))) (slot_value (slot_identifier)))))
+(source_file (support_value_inferrer (slot_reference (slot_identifier)) (inference_pair (assignment_slot (atomic_assignment_slot (slot_reference (slot_identifier)) (slot_value (slot_identifier)))) (assignment_slot (atomic_assignment_slot (slot_reference (slot_identifier)) (slot_value (slot_identifier)))) (slot_value (slot_identifier)))))
 
 
 ==================
@@ -20,7 +20,7 @@ sanity comply 1
 
 
 ---
-(source_file (value_inferrer (slot_reference (slot_identifier)) (inference_pair (assignment_slot (atomic_assignment_slot (slot_reference (slot_identifier)) (slot_value (slot_identifier)))) (assignment_slot (atomic_assignment_slot (slot_reference (slot_identifier)) (slot_value (slot_identifier)))) (slot_value (slot_identifier)))))
+(source_file (comply_value_inferrer (slot_reference (slot_identifier)) (inference_pair (assignment_slot (atomic_assignment_slot (slot_reference (slot_identifier)) (slot_value (slot_identifier)))) (assignment_slot (atomic_assignment_slot (slot_reference (slot_identifier)) (slot_value (slot_identifier)))) (slot_value (slot_identifier)))))
 
 ==================
 comment
@@ -33,7 +33,7 @@ comment
 
 ---
 (source_file 
-    (value_inferrer 
+    (support_value_inferrer 
         (slot_reference 
             (slot_identifier)) 
         (comment) 

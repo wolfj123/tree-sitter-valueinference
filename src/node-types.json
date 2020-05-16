@@ -57,6 +57,25 @@
     }
   },
   {
+    "type": "comply_value_inferrer",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "inference_pair",
+          "named": true
+        },
+        {
+          "type": "slot_reference",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "inference_pair",
     "named": true,
     "fields": {},
@@ -114,14 +133,18 @@
       "required": false,
       "types": [
         {
-          "type": "value_inferrer",
+          "type": "comply_value_inferrer",
+          "named": true
+        },
+        {
+          "type": "support_value_inferrer",
           "named": true
         }
       ]
     }
   },
   {
-    "type": "value_inferrer",
+    "type": "support_value_inferrer",
     "named": true,
     "fields": {},
     "children": {

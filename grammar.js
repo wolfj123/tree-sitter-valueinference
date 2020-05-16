@@ -19,11 +19,19 @@ module.exports = grammar({
     ],
   
     rules: {
-      source_file: $ => repeat($.value_inferrer),
+      source_file: $ => repeat(choice($.support_value_inferrer, $.comply_value_inferrer)),
       
-      value_inferrer: $ => seq(
-        "[", $.slot_reference, ":", choice("support","comply"), repeat($.inference_pair), "]"
+      support_value_inferrer: $ => seq(
+        "[", $.slot_reference, ":", "support", repeat($.inference_pair), "]"
       ),
+
+      comply_value_inferrer: $ => seq(
+        "[", $.slot_reference, ":", "comply", repeat($.inference_pair), "]"
+      ),
+
+      // value_inferrer: $ => seq(
+      //   "[", $.slot_reference, ":", choice("support","comply"), repeat($.inference_pair), "]"
+      // ),
 
       inference_pair: $ => seq(
         "[", $.assignment_slot, repeat(seq(";" ,$.assignment_slot)), "->", $.slot_value, "]"
